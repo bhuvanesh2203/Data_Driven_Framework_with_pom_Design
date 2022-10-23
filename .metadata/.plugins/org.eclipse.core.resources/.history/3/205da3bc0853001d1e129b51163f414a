@@ -1,0 +1,19 @@
+package com.bhuvanesh.testcases;
+
+import org.testng.annotations.BeforeMethod;
+
+import com.bhuvanesh.base.TestBase;
+import com.bhuvanesh.pages.LoginPage;
+
+public class HomePageTest extends TestBase {
+    public HomePageTest homePageTest;
+	public HomePageTest() {
+		super();
+	}
+	
+	@BeforeMethod
+    public void setup() {
+		initialization();
+		homePageTest=new HomePageTest();
+	}
+}

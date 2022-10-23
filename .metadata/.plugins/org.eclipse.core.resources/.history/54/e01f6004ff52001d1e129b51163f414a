@@ -1,0 +1,31 @@
+package com.bhuvanesh.testcases;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import com.bhuvanesh.base.TestBase;
+
+import junit.framework.Assert;
+
+public class LoginPageTest extends TestBase{
+	LoginPageTest loginpageTest; 
+	public LoginPageTest() {
+		super();
+	}
+	@BeforeMethod
+    public void setup() {
+		initialization();
+		loginpageTest=new LoginPageTest();
+	}
+	
+	@Test
+	public void validatePageTitle() {
+		String title=loginpageTest.validatePageTitle();
+		Assert.assertEquals(title, "");
+	}
+	@AfterMethod
+	public void teardown() {
+		driver.quit();
+	}
+
+}

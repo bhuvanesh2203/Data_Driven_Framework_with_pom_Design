@@ -1,0 +1,24 @@
+package com.bhuvanesh.testcases;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import com.bhuvanesh.base.TestBase;
+
+public class HomePageTest extends TestBase {
+    public HomePageTest homePageTest;
+	public HomePageTest() {
+		super();
+	}
+	
+	@BeforeMethod
+    public void setup() {
+		initialization();
+		homePageTest=new HomePageTest();
+	}
+	
+	@AfterMethod
+	public void teardown() {
+		driver.quit();
+	}
+}

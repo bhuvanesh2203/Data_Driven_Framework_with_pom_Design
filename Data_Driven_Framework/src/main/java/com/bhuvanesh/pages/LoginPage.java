@@ -14,7 +14,7 @@ public class LoginPage extends TestBase {
 	@FindBy(name="password")
 	WebElement password;
 	
-	@FindBy(xpath="//div[text()='Login']")
+	@FindBy(xpath="//*[text()='Login']")
 	WebElement Login;
 	
 	
@@ -24,5 +24,19 @@ public class LoginPage extends TestBase {
 	
 	public String validateTitle() {
 		return driver.getTitle();
+		
+	}
+	public HomePage login(String userName,String Password) {
+		try {
+		Login.click();	
+		Thread.sleep(4000);
+		email.sendKeys(userName);
+		password.sendKeys(Password);
+		Login.click();
+		
+		} catch (InterruptedException e) {		
+			e.printStackTrace();
+		}
+		return new HomePage();
 	}
 }

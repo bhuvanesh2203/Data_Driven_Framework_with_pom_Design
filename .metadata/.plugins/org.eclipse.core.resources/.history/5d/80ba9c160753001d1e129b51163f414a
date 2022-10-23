@@ -1,0 +1,14 @@
+package com.bhuvanesh.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.bhuvanesh.base.TestBase;
+
+public class HomePage extends TestBase{
+	
+	@FindBy(xpath="//*[text()='Bhuvanesh M']")
+	WebElement homepageName;
+	
+
+}
